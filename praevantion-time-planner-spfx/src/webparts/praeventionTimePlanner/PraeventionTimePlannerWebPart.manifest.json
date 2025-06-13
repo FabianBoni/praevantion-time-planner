@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "a8f8e8d1-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
+  "alias": "PraeventionTimePlannerWebPart",
+  "componentType": "WebPart",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "Prävention Terminplaner" },
+    "description": { "default": "Intelligente Terminplanung für Schulbesuche in Basel-Stadt" },
+    "officeFabricIconFontName": "Calendar",
+    "properties": {
+      "description": "Prävention Terminplaner"
+    }
+  }]
+}
