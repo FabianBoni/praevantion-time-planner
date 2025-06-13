@@ -3,10 +3,11 @@
      Name="praevantion-time-planner-client-side-solution" 
      ProductID="a8f8e8d0-e8a4-4b4b-9b4b-9b4b9b4b9b4b" 
      SharePointMinVersion="16.0.0.0" 
-     Version="1.0.0.0">
+     Version="1.0.0.0"
+     IsClientSideSolution="true">
   <Properties>
     <Title>praevantion-time-planner-client-side-solution</Title>
-    <StartPage>~appWebUrl/Lists/aspnetserverapi/AllItems.aspx</StartPage>
+    <StartPage>~appWebUrl/Pages/Home.aspx</StartPage>
   </Properties>
   <AppPrincipal>
     <Internal />

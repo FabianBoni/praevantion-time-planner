@@ -4,8 +4,9 @@
     "name": "praevantion-time-planner-client-side-solution",
     "id": "a8f8e8d0-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
     "version": "1.0.0.0",
-    "includeClientSideAssets": false,
-    "skipFeatureDeployment": false
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"
