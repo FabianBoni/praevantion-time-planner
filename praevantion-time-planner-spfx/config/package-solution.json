@@ -1,12 +1,20 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "praevantion-time-planner-client-side-solution",
-    "id": "a8f8e8d0-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
+    "name": "praevantion-time-planner-spfx-client-side-solution",
+    "id": "a8f8e8d1-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
-    "isDomainIsolated": false
+    "isDomainIsolated": false,
+    "features": [
+      {
+        "title": "praevantion-time-planner-spfx Feature",
+        "description": "The feature that activates elements of the praevantion-time-planner-spfx solution.",
+        "id": "a8f8e8d1-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
+        "version": "1.0.0.0"
+      }
+    ]
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"
