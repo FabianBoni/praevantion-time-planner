@@ -6,15 +6,7 @@
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
-    "features": [
-      {
-        "title": "praevantion-time-planner-spfx Feature",
-        "description": "The feature that activates elements of the praevantion-time-planner-spfx solution.",
-        "id": "a8f8e8d1-e8a4-4b4b-9b4b-9b4b9b4b9b4b",
-        "version": "1.0.0.0"
-      }
-    ]
+    "isDomainIsolated": false
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"
