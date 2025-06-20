@@ -36,6 +36,7 @@
     "@types/node": "^8.10.66",
     "@types/webpack-env": "^1.13.0",
     "ajv": "~5.2.2",
+    "css-loader": "^0.28.10",
     "eslint-plugin-react-hooks": "4.3.0",
     "gulp": "~3.9.1",
     "typescript": "2.4.2"

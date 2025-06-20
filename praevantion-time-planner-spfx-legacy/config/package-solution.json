@@ -4,16 +4,7 @@
     "name": "praevantion-time-planner-client-side-solution",
     "id": "2d44dabb-53b4-40cb-97d1-b2124750348f",
     "version": "1.0.0.0",
-    "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
-    "features": [
-      {
-        "title": "praevantion-time-planner Feature",
-        "description": "The feature that activates elements of the praevantion-time-planner solution.",
-        "id": "7b169eca-8c62-4e2b-9f1f-e62f0003645f",
-        "version": "1.0.0.0"
-      }
-    ]
+    "includeClientSideAssets": true
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"
