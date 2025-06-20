@@ -2562,7 +2562,10 @@ function getManifests() {
         "PraeventionTimeplanerWebPartStrings": {
           "defaultPath": "lib/webparts/praeventionTimeplaner/loc/en-us.js",
           "type": "localizedPath",
-          "paths": {}
+          "paths": {
+            "de-DE": "lib/webparts/praeventionTimeplaner/loc/de-de.js",
+            "en-US": "lib/webparts/praeventionTimeplaner/loc/en-us.js"
+          }
         },
         "react": {
           "type": "component",
