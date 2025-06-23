@@ -5,7 +5,7 @@
     "id": "2d44dabb-53b4-40cb-97d1-b2124750348f",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
-    "skipFeatureDeployment": true
+    "skipFeatureDeployment": false
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"

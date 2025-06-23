@@ -2560,7 +2560,7 @@ function getManifests() {
           "path": "dist/praevention-timeplaner-web-part.js"
         },
         "PraeventionTimeplanerWebPartStrings": {
-          "defaultPath": "lib/webparts/praeventionTimeplaner/loc/en-us.js",
+          "defaultPath": "lib/webparts/praeventionTimeplaner/loc/default.js",
           "type": "localizedPath",
           "paths": {
             "de-DE": "lib/webparts/praeventionTimeplaner/loc/de-de.js",
