@@ -25,8 +25,19 @@ export default class TimePlanner extends React.Component<ITimePlannerProps, ITim
   constructor(props: ITimePlannerProps) {
     super(props);
     
+    let appointments: IAppointment[] = [];
+    try {
+      appointments = JSON.parse(props.appointments || '[]').map(appointment => ({
+        ...appointment,
+        startDate: new Date(appointment.startDate),
+        endDate: new Date(appointment.endDate)
+      }));
+    } catch (error) {
+      console.error('Error parsing appointments:', error);
+    }
+    
     this.state = {
-      appointments: [],
+      appointments,
       newAppointment: this._getEmptyAppointment(),
       isAddingNew: false,
       currentView: 'list'
@@ -148,17 +159,18 @@ export default class TimePlanner extends React.Component<ITimePlannerProps, ITim
           onClick={this._showAddAppointmentPanel} 
           className={styles.button}
         />
-        <DetailsList
-          items={this.state.appointments}
-          columns={this._columns}
-          selectionMode={SelectionMode.none}
-          setKey="set"
-          layoutMode={1}
-          isHeaderVisible={true}
-        />
-        {this.state.appointments.length === 0 && 
+        {this.state.appointments.length > 0 ? (
+          <DetailsList
+            items={this.state.appointments}
+            columns={this._columns}
+            selectionMode={SelectionMode.none}
+            setKey="set"
+            layoutMode={1}
+            isHeaderVisible={true}
+          />
+        ) : (
           <div className={styles.description}>No appointments scheduled. Click "Add New Appointment" to create one.</div>
-        }
+        )}
       </div>
     );
   }
@@ -457,20 +469,39 @@ export default class TimePlanner extends React.Component<ITimePlannerProps, ITim
       id: this.state.newAppointment.id || `appointment-${Date.now()}`
     };
     
+    const updatedAppointments = [...this.state.appointments, newAppointment];
+    
     this.setState({
-      appointments: [...this.state.appointments, newAppointment],
+      appointments: updatedAppointments,
       isAddingNew: false,
       newAppointment: this.state.newAppointment,
       currentView: this.state.currentView
+    }, () => {
+      this._saveAppointmentsToProps();
     });
   }
 
   private _deleteAppointment = (id: string): void => {
+    const updatedAppointments = this.state.appointments.filter(appointment => appointment.id !== id);
+    
     this.setState({
-      appointments: this.state.appointments.filter(appointment => appointment.id !== id),
+      appointments: updatedAppointments,
       isAddingNew: this.state.isAddingNew,
       newAppointment: this.state.newAppointment,
       currentView: this.state.currentView
+    }, () => {
+      this._saveAppointmentsToProps();
     });
+  }
+  
+  private _saveAppointmentsToProps = (): void => {
+    // Convert dates to strings before saving
+    const appointmentsToSave = this.state.appointments.map(appointment => ({
+      ...appointment,
+      startDate: appointment.startDate.toISOString(),
+      endDate: appointment.endDate.toISOString()
+    }));
+    
+    this.props.onAppointmentsChange(JSON.stringify(appointmentsToSave));
   }
 }

@@ -2,6 +2,8 @@ export interface ITimePlannerProps {
   description: string;
   displayMode?: string;
   updateProperty?: (value: string) => void;
+  appointments: string;
+  onAppointmentsChange: (appointments: string) => void;
 }
 
 export interface ITimePlannerState {

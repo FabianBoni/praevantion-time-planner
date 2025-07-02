@@ -13,15 +13,21 @@ import { ITimePlannerProps } from './components/ITimePlannerProps';
 
 export interface ITimePlannerWebPartProps {
   description: string;
+  appointments: string;
 }
 
 export default class TimePlannerWebPart extends BaseClientSideWebPart<ITimePlannerWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<ITimePlannerProps > = React.createElement(
+    const element: React.ReactElement<ITimePlannerProps> = React.createElement(
       TimePlanner,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        appointments: this.properties.appointments || '[]',
+        onAppointmentsChange: (appointments: string) => {
+          this.properties.appointments = appointments;
+          this.context.propertyPane.refresh();
+        }
       }
     );
 
