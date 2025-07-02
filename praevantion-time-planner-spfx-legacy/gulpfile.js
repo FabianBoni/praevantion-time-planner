@@ -61,31 +61,23 @@ function createZipWithPowerShell(sourcePath, destPath) {
   });
 }
 
-// Custom task that builds and fixes manifest in one go
-gulp.task('package-classic', ['package-solution'], function(done) {
-  console.log('📦 Fixing manifest and creating new package...');
+// Custom task that creates a manual classic package
+gulp.task('package-manual-classic', function(done) {
+  console.log('� Creating manual classic SharePoint App package...');
   
-  setTimeout(() => {
-    // Replace the manifest
-    replaceWithClassicManifest();
-    
-    // Get paths
-    const debugDir = path.join(__dirname, 'sharepoint', 'solution', 'debug');
-    const solutionDir = path.join(__dirname, 'sharepoint', 'solution');
-    const packagePath = path.join(solutionDir, 'praevantion-time-planner-classic.zip');
-    
-    // Create new package with fixed manifest using PowerShell
-    createZipWithPowerShell(debugDir, packagePath)
-      .then(() => {
-        console.log('✅ New package created: praevantion-time-planner-classic.sppkg');
-        console.log('🚀 Package ready for deployment!');
-        done();
-      })
-      .catch((err) => {
-        console.error('❌ Failed to create package:', err.message);
-        done(err);
-      });
-  }, 1000); // Wait for package-solution to complete
+  const { createClassicPackage } = require('./create-classic-package');
+  
+  createClassicPackage()
+    .then((packagePath) => {
+      console.log('✅ Manual classic package created successfully!');
+      console.log(`📦 Package location: ${packagePath}`);
+      console.log('🚀 This package should work with SharePoint Subscription Edition!');
+      done();
+    })
+    .catch((err) => {
+      console.error('❌ Failed to create manual package:', err.message);
+      done(err);
+    });
 });
 
 // Custom task to fix AppManifest.xml manually (fallback)

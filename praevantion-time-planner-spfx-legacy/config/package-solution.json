@@ -3,7 +3,7 @@
   "solution": {
     "name": "praevantion-time-planner-client-side-solution",
     "id": "2d44dabb-53b4-40cb-97d1-b2124750348f",
-    "version": "1.0.0.2",
+    "version": "1.0.0.3",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": false
   },
