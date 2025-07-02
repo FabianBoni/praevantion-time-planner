@@ -7,8 +7,8 @@ const path = require('path');
 
 build.tslint.enabled = false;
 
-// Custom task to fix AppManifest.xml and repackage
-gulp.task('fix-manifest', () => {
+// Custom task to fix AppManifest.xml and repackage manually
+gulp.task('fix-manifest-manual', () => {
   return new Promise((resolve, reject) => {
     const manifestPath = path.join(__dirname, 'sharepoint', 'solution', 'debug', 'AppManifest.xml');
     
@@ -33,15 +33,8 @@ gulp.task('fix-manifest', () => {
       
       fs.writeFileSync(manifestPath, classicManifest);
       console.log('✅ AppManifest.xml updated to classic format');
-      
-      // Copy the .sppkg to .zip for deployment
-      const sppkgPath = path.join(__dirname, 'sharepoint', 'solution', 'praevantion-time-planner.sppkg');
-      const zipPath = path.join(__dirname, 'sharepoint', 'solution', 'praevantion-time-planner-classic.zip');
-      
-      if (fs.existsSync(sppkgPath)) {
-        fs.copyFileSync(sppkgPath, zipPath);
-        console.log('✅ Created praevantion-time-planner-classic.zip for deployment');
-      }
+      console.log('📦 Next step: Go to sharepoint/solution/debug and manually run:');
+      console.log('   Compress-Archive -Path ".\\*" -DestinationPath "..\\praevantion-final-working.zip" -Force');
       
       resolve();
     } else {
