@@ -7,7 +7,7 @@
      IsClientSideSolution="true" 
      SkipFeatureDeployment="true">
   <Properties>
-    <Title>praevantion-time-planner-client-side-solution</Title>
+    <Title>Praevantion Time Planner</Title>
     <StartPage>~appWebUrl/Lists/SitePages/Home.aspx</StartPage>
   </Properties>
   <AppPrincipal>
