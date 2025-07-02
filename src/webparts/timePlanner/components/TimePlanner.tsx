@@ -95,7 +95,7 @@ export default class TimePlanner extends React.Component<ITimePlannerProps, ITim
         <div className={styles.container}>
           <div className={styles.row}>
             <div className={styles.column}>
-              <span className={styles.title}>Time Planner</span>
+              <span className={styles.title}>Praevantion Time Planner</span>
               <p className={styles.subTitle}>Manage your appointments efficiently</p>
             </div>
           </div>

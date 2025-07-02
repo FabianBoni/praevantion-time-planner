@@ -1,7 +1,7 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "Prävention Time Planner",
+    "name": "Praevantion-Time-Planner",
     "id": "bfa4ebc3-3419-4d28-8ac8-6895601a5e20",
     "version": "1.0.0.0"
   },
