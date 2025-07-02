@@ -1,13 +1,13 @@
 {
   "entries": [
     {
-      "entry": "./lib/webparts/preventionTimePlanner/PreventionTimePlannerWebPart.js",
-      "manifest": "./src/webparts/preventionTimePlanner/PreventionTimePlannerWebPart.manifest.json",
-      "outputPath": "./dist/prevention-time-planner-web-part.js"
+      "entry": "./lib/webparts/timePlanner/TimePlannerWebPart.js",
+      "manifest": "./src/webparts/timePlanner/TimePlannerWebPart.manifest.json",
+      "outputPath": "./dist/time-planner-web-part.js"
     }
   ],
   "externals": {},
   "localizedResources": {
-    "PreventionTimePlannerWebPartStrings": "webparts/preventionTimePlanner/loc/{locale}.js"
+    "TimePlannerWebPartStrings": "webparts/timePlanner/loc/{locale}.js"
   }
 }

@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="34b44393-1d35-4242-89db-d4cc37228970" Title="Praevantion Time Planner Feature" Description="The feature that activates elements of the Praevantion Time Planner solution." Version="1.0.0.0" Scope="Site">
-  <ElementManifests>
-    <ElementManifest Location="34b44393-1d35-4242-89db-d4cc37228970\WebPart_34b44393-1d35-4242-89db-d4cc37228970.xml" />
-  </ElementManifests>
-</Feature>

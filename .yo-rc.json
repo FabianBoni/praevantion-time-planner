@@ -2,7 +2,7 @@
   "@microsoft/generator-sharepoint": {
     "version": "1.4.1",
     "libraryName": "praevantion-time-planner",
-    "libraryId": "b8ca39ed-114d-4c73-b9c2-a99e485ba40c",
+    "libraryId": "bfa4ebc3-3419-4d28-8ac8-6895601a5e20",
     "environment": "onprem"
   }
 }

@@ -1,16 +1,9 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "praevantion-time-planner-client-side-solution",
-    "id": "b8ca39ed-114d-4c73-b9c2-a99e485ba40c",
-    "version": "1.0.0.0",
-    "skipFeatureDeployment": true,
-    "features": [{
-      "title": "Praevantion Time Planner Feature",
-      "description": "The feature that activates elements of the Praevantion Time Planner solution.",
-      "id": "34b44393-1d35-4242-89db-d4cc37228970",
-      "version": "1.0.0.0"
-    }]
+    "name": "Prävention Time Planner",
+    "id": "bfa4ebc3-3419-4d28-8ac8-6895601a5e20",
+    "version": "1.0.0.0"
   },
   "paths": {
     "zippedPackage": "solution/praevantion-time-planner.sppkg"

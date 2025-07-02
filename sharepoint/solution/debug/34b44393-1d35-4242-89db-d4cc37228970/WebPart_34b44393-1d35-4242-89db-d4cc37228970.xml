@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ClientSideComponentInstance 
-    InstanceId="34b44393-1d35-4242-89db-d4cc37228970"
-    ComponentId="34b44393-1d35-4242-89db-d4cc37228970"
-    Title="Praevantion Time Planner" 
-    Description="Intelligente Terminplanung fÃ¼r das PrÃ¤ventionsteam Basel-Stadt">
-  </ClientSideComponentInstance>
-</Elements>

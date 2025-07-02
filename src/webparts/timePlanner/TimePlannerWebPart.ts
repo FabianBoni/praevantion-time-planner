@@ -7,25 +7,21 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'PreventionTimePlannerWebPartStrings';
-import PreventionTimePlanner from './components/PreventionTimePlanner';
-import { IPreventionTimePlannerProps } from './components/IPreventionTimePlannerProps';
+import * as strings from 'TimePlannerWebPartStrings';
+import TimePlanner from './components/TimePlanner';
+import { ITimePlannerProps } from './components/ITimePlannerProps';
 
-export interface IPreventionTimePlannerWebPartProps {
+export interface ITimePlannerWebPartProps {
   description: string;
 }
 
-export default class PreventionTimePlannerWebPart extends BaseClientSideWebPart<IPreventionTimePlannerWebPartProps> {
+export default class TimePlannerWebPart extends BaseClientSideWebPart<ITimePlannerWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IPreventionTimePlannerProps> = React.createElement(
-      PreventionTimePlanner,
+    const element: React.ReactElement<ITimePlannerProps > = React.createElement(
+      TimePlanner,
       {
-        description: this.properties.description,
-        isDarkTheme: false,
-        environmentMessage: '',
-        hasTeamsContext: false,
-        userDisplayName: ''
+        description: this.properties.description
       }
     );
 

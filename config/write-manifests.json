@@ -1,4 +1,4 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/write-manifests.schema.json",
-  "cdnBasePath": "https://spi-u.intranet.bs.ch/JSD/QMServices/Roadmap/SiteAssets"
+  "cdnBasePath": "<!-- PATH TO CDN -->"
 }
