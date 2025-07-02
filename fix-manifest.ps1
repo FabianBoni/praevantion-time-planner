@@ -1,17 +1,38 @@
 # fix-manifest.ps1
-# This script replaces the generated AppManifest.xml with our custom template
+# This script replaces the generated AppManifest.xml and WebPart XML with our custom templates
 
 # Parameters
-$sourcePath = ".\sharepoint\solution\AppManifest.template.xml"
-$targetPath = ".\sharepoint\solution\debug\AppManifest.xml"
+$manifestSourcePath = ".\sharepoint\solution\AppManifest.template.xml"
+$manifestTargetPath = ".\sharepoint\solution\debug\AppManifest.xml"
 
-# Check if source file exists
-if (Test-Path $sourcePath) {
+# Check if manifest template exists
+if (Test-Path $manifestSourcePath) {
     # Copy the template to the debug folder, overwriting the existing file
-    Copy-Item -Path $sourcePath -Destination $targetPath -Force
+    Copy-Item -Path $manifestSourcePath -Destination $manifestTargetPath -Force
     Write-Host "AppManifest.xml has been replaced with the custom template."
 } else {
-    Write-Host "Error: Template file not found at $sourcePath"
+    Write-Host "Error: Manifest template file not found at $manifestSourcePath"
+    exit 1
+}
+
+# Find the feature folder (which contains the GUID)
+$featureFolder = Get-ChildItem -Path ".\sharepoint\solution\debug" -Directory | Where-Object { $_.Name -match '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' } | Select-Object -First 1
+
+if ($featureFolder) {
+    $webPartSourcePath = ".\sharepoint\solution\WebPart_template.xml"
+    $webPartTargetPath = ".\sharepoint\solution\debug\$($featureFolder.Name)\WebPart_$($featureFolder.Name).xml"
+    
+    # Check if WebPart template exists
+    if (Test-Path $webPartSourcePath) {
+        # Copy the template to the debug folder, overwriting the existing file
+        Copy-Item -Path $webPartSourcePath -Destination $webPartTargetPath -Force
+        Write-Host "WebPart XML has been replaced with the custom template."
+    } else {
+        Write-Host "Error: WebPart template file not found at $webPartSourcePath"
+        exit 1
+    }
+} else {
+    Write-Host "Error: Could not find feature folder in debug directory."
     exit 1
 }
 
