@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "praevantion-time-planner-client-side-solution",
+    "id": "b8ca39ed-114d-4c73-b9c2-a99e485ba40c",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/praevantion-time-planner.sppkg"
+  }
+}
