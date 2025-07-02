@@ -3,9 +3,7 @@
      Name="Praevantion-Time-Planner"
      ProductID="bfa4ebc3-3419-4d28-8ac8-6895601a5e20"
      Version="1.0.0.0"
-     SharePointMinVersion="16.0.0.0"
-     IsClientSideSolution="true"
-     SkipFeatureDeployment="true">
+     SharePointMinVersion="16.0.0.0">
   <Properties>
     <Title>Praevantion-Time-Planner</Title>
     <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
