@@ -7,21 +7,25 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'HelloWorldWebPartStrings';
-import HelloWorld from './components/HelloWorld';
-import { IHelloWorldProps } from './components/IHelloWorldProps';
+import * as strings from 'PreventionTimePlannerWebPartStrings';
+import PreventionTimePlanner from './components/PreventionTimePlanner';
+import { IPreventionTimePlannerProps } from './components/IPreventionTimePlannerProps';
 
-export interface IHelloWorldWebPartProps {
+export interface IPreventionTimePlannerWebPartProps {
   description: string;
 }
 
-export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+export default class PreventionTimePlannerWebPart extends BaseClientSideWebPart<IPreventionTimePlannerWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IHelloWorldProps > = React.createElement(
-      HelloWorld,
+    const element: React.ReactElement<IPreventionTimePlannerProps> = React.createElement(
+      PreventionTimePlanner,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        isDarkTheme: false,
+        environmentMessage: '',
+        hasTeamsContext: false,
+        userDisplayName: ''
       }
     );
 

@@ -1,13 +1,13 @@
 {
   "entries": [
     {
-      "entry": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
-      "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json",
-      "outputPath": "./dist/hello-world-web-part.js"
+      "entry": "./lib/webparts/preventionTimePlanner/PreventionTimePlannerWebPart.js",
+      "manifest": "./src/webparts/preventionTimePlanner/PreventionTimePlannerWebPart.manifest.json",
+      "outputPath": "./dist/prevention-time-planner-web-part.js"
     }
   ],
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "webparts/helloWorld/loc/{locale}.js"
+    "PreventionTimePlannerWebPartStrings": "webparts/preventionTimePlanner/loc/{locale}.js"
   }
 }
