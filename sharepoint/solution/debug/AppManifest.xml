@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="praevantion-time-planner-client-side-solution" ProductID="b8ca39ed-114d-4c73-b9c2-a99e485ba40c" Version="1.0.0.0" SharePointMinVersion="16.0.0.0" IsClientSideSolution="true" SkipFeatureDeployment="true"><Properties><Title>praevantion-time-planner-client-side-solution</Title></Properties></App>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" 
+     Name="praevantion-time-planner-client-side-solution" 
+     ProductID="b8ca39ed-114d-4c73-b9c2-a99e485ba40c" 
+     Version="1.0.0.0" 
+     SharePointMinVersion="16.0.0.0" 
+     IsClientSideSolution="true" 
+     SkipFeatureDeployment="true">
+  <Properties>
+    <Title>praevantion-time-planner-client-side-solution</Title>
+    <StartPage>~appWebUrl/Lists/SitePages/Home.aspx</StartPage>
+  </Properties>
+  <AppPrincipal>
+    <Internal AllowedRemoteHostUrl="*" />
+  </AppPrincipal>
+</App>
