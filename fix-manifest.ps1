@@ -15,22 +15,43 @@ if (Test-Path $manifestSourcePath) {
     exit 1
 }
 
-# Create ClientWebPart directory if it doesn't exist
-$clientWebPartPath = ".\sharepoint\solution\debug\ClientWebPart"
-if (-not (Test-Path $clientWebPartPath)) {
-    New-Item -Path $clientWebPartPath -ItemType Directory -Force | Out-Null
-    Write-Host "Created ClientWebPart directory in debug folder."
-}
+# Find the feature folder (which contains the GUID)
+$featureFolder = Get-ChildItem -Path ".\sharepoint\solution\debug" -Directory | Where-Object { $_.Name -match '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' } | Select-Object -First 1
 
-# Copy the ASPX file
-$aspxSourcePath = ".\sharepoint\solution\ClientWebPart\TimePlannerWebPart.aspx"
-$aspxTargetPath = "$clientWebPartPath\TimePlannerWebPart.aspx"
+if ($featureFolder) {
+    $webPartSourcePath = ".\sharepoint\solution\WebPart_template.xml"
+    $webPartTargetPath = ".\sharepoint\solution\debug\$($featureFolder.Name)\WebPart_$($featureFolder.Name).xml"
+    
+    # Check if WebPart template exists
+    if (Test-Path $webPartSourcePath) {
+        # Copy the template to the debug folder, overwriting the existing file
+        Copy-Item -Path $webPartSourcePath -Destination $webPartTargetPath -Force
+        Write-Host "WebPart XML has been replaced with the custom template."
+    } else {
+        Write-Host "Error: WebPart template file not found at $webPartSourcePath"
+        exit 1
+    }
 
-if (Test-Path $aspxSourcePath) {
-    Copy-Item -Path $aspxSourcePath -Destination $aspxTargetPath -Force
-    Write-Host "TimePlannerWebPart.aspx has been copied to debug folder."
+    # Create ClientWebPart directory within the feature folder
+    $clientWebPartPath = ".\sharepoint\solution\debug\$($featureFolder.Name)\ClientWebPart"
+    if (-not (Test-Path $clientWebPartPath)) {
+        New-Item -Path $clientWebPartPath -ItemType Directory -Force | Out-Null
+        Write-Host "Created ClientWebPart directory in feature folder."
+    }
+
+    # Copy the ASPX file to the correct location within the feature folder
+    $aspxSourcePath = ".\sharepoint\solution\ClientWebPart\TimePlannerWebPart.aspx"
+    $aspxTargetPath = "$clientWebPartPath\TimePlannerWebPart.aspx"
+
+    if (Test-Path $aspxSourcePath) {
+        Copy-Item -Path $aspxSourcePath -Destination $aspxTargetPath -Force
+        Write-Host "TimePlannerWebPart.aspx has been copied to feature folder."
+    } else {
+        Write-Host "Error: ASPX file not found at $aspxSourcePath"
+        exit 1
+    }
 } else {
-    Write-Host "Error: ASPX file not found at $aspxSourcePath"
+    Write-Host "Error: Could not find feature folder in debug directory."
     exit 1
 }
 
