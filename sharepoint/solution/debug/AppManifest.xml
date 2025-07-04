@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
-     Name="Praevantion-Time-Planner"
-     ProductID="bfa4ebc3-3419-4d28-8ac8-6895601a5e20"
-     Version="1.2.0.0"
-     SharePointMinVersion="16.0.0.0"
-     IsClientSideSolution="true"
-     SkipFeatureDeployment="true">
-  <Properties>
-    <Title>Praevantion Time Planner</Title>
-  </Properties>
-</App>
+<?xml version="1.0" encoding="utf-8"?><App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="Praevantion-Time-Planner" ProductID="bfa4ebc3-3419-4d28-8ac8-6895601a5e20" Version="1.2.0.0" SharePointMinVersion="16.0.0.0" IsClientSideSolution="true"><Properties><Title>Praevantion-Time-Planner</Title></Properties></App>
