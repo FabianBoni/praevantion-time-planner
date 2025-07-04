@@ -15,6 +15,25 @@ if (Test-Path $manifestSourcePath) {
     exit 1
 }
 
+# Create ClientWebPart directory if it doesn't exist
+$clientWebPartPath = ".\sharepoint\solution\debug\ClientWebPart"
+if (-not (Test-Path $clientWebPartPath)) {
+    New-Item -Path $clientWebPartPath -ItemType Directory -Force | Out-Null
+    Write-Host "Created ClientWebPart directory in debug folder."
+}
+
+# Copy the ASPX file
+$aspxSourcePath = ".\sharepoint\solution\ClientWebPart\TimePlannerWebPart.aspx"
+$aspxTargetPath = "$clientWebPartPath\TimePlannerWebPart.aspx"
+
+if (Test-Path $aspxSourcePath) {
+    Copy-Item -Path $aspxSourcePath -Destination $aspxTargetPath -Force
+    Write-Host "TimePlannerWebPart.aspx has been copied to debug folder."
+} else {
+    Write-Host "Error: ASPX file not found at $aspxSourcePath"
+    exit 1
+}
+
 # Find the feature folder (which contains the GUID)
 $featureFolder = Get-ChildItem -Path ".\sharepoint\solution\debug" -Directory | Where-Object { $_.Name -match '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' } | Select-Object -First 1
 
