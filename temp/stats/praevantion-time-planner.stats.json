@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "2.2.1",
-  "hash": "010c5b8a23fd70caadbb",
-  "time": 1956,
+  "hash": "9587c057a2f9be04f029",
+  "time": 1904,
   "publicPath": "",
   "assetsByChunkName": {
     "time-planner-web-part": "time-planner-web-part.js"
@@ -47,7 +47,7 @@
       "files": [
         "time-planner-web-part.js"
       ],
-      "hash": "19c7a1e091fb1d0682c5",
+      "hash": "f8c25cd63cce319456ef",
       "parents": [],
       "origins": [
         {
@@ -3302,9 +3302,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\DocumentCard\\DocumentCardActivity.js",
-      "issuerId": 199,
-      "issuerName": "./~/office-ui-fabric-react/lib/components/DocumentCard/DocumentCardActivity.js",
+      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\DocumentCard\\DocumentCardActions.js",
+      "issuerId": 198,
+      "issuerName": "./~/office-ui-fabric-react/lib/components/DocumentCard/DocumentCardActions.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5785,9 +5785,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\DatePicker\\index.js",
-      "issuerId": 189,
-      "issuerName": "./~/office-ui-fabric-react/lib/components/DatePicker/index.js",
+      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\Calendar\\index.js",
+      "issuerId": 163,
+      "issuerName": "./~/office-ui-fabric-react/lib/components/Calendar/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6935,9 +6935,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\TeachingBubble\\TeachingBubbleContent.js",
-      "issuerId": 83,
-      "issuerName": "./~/office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubbleContent.js",
+      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\TeachingBubble\\TeachingBubble.js",
+      "issuerId": 276,
+      "issuerName": "./~/office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubble.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7395,9 +7395,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\pickers\\TagPicker\\TagItem.js",
-      "issuerId": 91,
-      "issuerName": "./~/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.js",
+      "issuer": "C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\source-map-loader\\index.js!C:\\Users\\fabud\\Documents\\GitHub\\praevantion-time-planner\\node_modules\\office-ui-fabric-react\\lib\\components\\pickers\\TagPicker\\TagPicker.js",
+      "issuerId": 294,
+      "issuerName": "./~/office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
