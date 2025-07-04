@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ClientWebPart Name="Praevantion Time Planner" Title="Praevantion Time Planner" Description="Intelligente Terminplanung fuer Praevantion" DefaultWidth="700" DefaultHeight="400">
+    <Content Type="html"/>
+  </ClientWebPart>
+</Elements>
