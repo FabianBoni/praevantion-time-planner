@@ -1,152 +1,206 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
 .timePlanner {
+  overflow: hidden;
+  padding: 16px;
+  background: #f5f5f5;
+  min-height: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0px auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 
-  .row {
-    @include ms-Grid-row;
-    @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     padding: 20px;
-  }
-
-  .column {
-    @include ms-Grid-col;
-    @include ms-lg10;
-    @include ms-xl8;
-    @include ms-xlPush2;
-    @include ms-lgPush1;
-  }
-
-  .title {
-    @include ms-font-xl;
-    @include ms-fontColor-white;
-  }
-
-  .subTitle {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
-
-  .description {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
-
-  .button {
-    // Our button
-    text-decoration: none;
-    height: 32px;
-
-    // Primary Button
-    min-width: 80px;
-    background-color: $ms-color-themePrimary;
-    border-color: $ms-color-themePrimary;
-    color: $ms-color-white;
-
-    // Basic Button
-    outline: transparent;
-    position: relative;
-    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: $ms-font-size-m;
-    font-weight: $ms-font-weight-regular;
-    border-width: 0;
     text-align: center;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 16px;
 
-    .label {
-      font-weight: $ms-font-weight-semibold;
-      font-size: $ms-font-size-m;
-      height: 32px;
-      line-height: 32px;
-      margin: 0 4px;
-      vertical-align: top;
-      display: inline-block;
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 8px 0 0 0;
+      opacity: 0.9;
+      font-size: 14px;
     }
   }
 
-  // Time Planner specific styles
-  .listContainer {
+  .content {
     padding: 20px;
-    background-color: $ms-color-white;
   }
-  
-  .calendarContainer {
+
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .statCard {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
     padding: 20px;
-    background-color: $ms-color-white;
-  }
-  
-  .addButton {
-    margin-bottom: 15px;
-  }
-  
-  .emptyMessage {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: $ms-color-neutralLighter;
+    border-radius: 8px;
     text-align: center;
-    border-radius: 2px;
-    color: $ms-color-neutralSecondary;
-  }
-  
-  .dateGroup {
-    margin-bottom: 20px;
-    
-    h3 {
-      padding: 10px;
-      background-color: $ms-color-themeLighter;
-      margin-bottom: 10px;
-      border-radius: 2px;
-    }
-  }
-  
-  .appointmentCard {
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 4px solid $ms-color-themePrimary;
-    background-color: $ms-color-neutralLighterAlt;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    
-    h4 {
-      margin-top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .statNumber {
+      font-size: 32px;
+      font-weight: bold;
       margin-bottom: 8px;
     }
-    
-    div {
-      margin-bottom: 5px;
+
+    .statLabel {
+      font-size: 14px;
+      opacity: 0.9;
     }
   }
-  
-  .deleteButton {
-    margin-top: 10px;
-    background-color: $ms-color-neutralLighter;
-  }
-  
-  .formGroup {
-    margin-bottom: 15px;
-  }
-  
-  .timeField {
-    margin-top: 5px;
-  }
-  
-  .formActions {
+
+  .appointmentsList {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin-top: 20px;
-    display: flex;
-    
-    button + button {
-      margin-left: 10px;
+
+    .listHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .filters {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: center;
     }
   }
-  
-  .cancelButton {
-    margin-left: 10px;
+
+  .schoolCard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .schoolHeader {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .schoolIcon {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .schoolName {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .schoolDetails {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  .statusBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+
+    &.geplant {
+      background-color: #ffa500;
+    }
+
+    &.bestaetigt {
+      background-color: #28a745;
+    }
+
+    &.durchgefuehrt {
+      background-color: #007bff;
+    }
+
+    &.abgesagt {
+      background-color: #dc3545;
+    }
+  }
+
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .errorMessage {
+    margin-bottom: 20px;
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 8px;
+
+    .statsGrid {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .statsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .header {
+      padding: 16px;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .content {
+      padding: 16px;
+    }
   }
 }

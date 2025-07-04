@@ -23,6 +23,7 @@ export default class TimePlannerWebPart extends BaseClientSideWebPart<ITimePlann
       TimePlanner,
       {
         description: this.properties.description,
+        context: this.context,
         appointments: this.properties.appointments || '[]',
         onAppointmentsChange: (appointments: string) => {
           this.properties.appointments = appointments;
