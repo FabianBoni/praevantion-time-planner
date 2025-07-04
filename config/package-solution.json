@@ -3,7 +3,7 @@
   "solution": {
     "name": "Praevantion-Time-Planner",
     "id": "bfa4ebc3-3419-4d28-8ac8-6895601a5e20",
-    "version": "2.0.0.0",
+    "version": "1.2.0.0",
     "skipFeatureDeployment": true
   },
   "paths": {

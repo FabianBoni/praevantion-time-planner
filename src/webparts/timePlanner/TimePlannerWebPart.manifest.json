@@ -1,6 +1,6 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "89d40ae0-36b4-4285-93c8-3b05cbe76ec9",
+  "id": "f2c8b1e5-7a4d-4e89-9c3f-2b5a8e6d1f98",
   "alias": "TimePlannerWebPart",
   "componentType": "WebPart",
 
